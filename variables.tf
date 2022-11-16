@@ -1,3 +1,9 @@
+variable "associate_public_routes" {
+  type        = bool
+  description = "whether or not the public subnet route table should be associated with the public subnets"
+  default     = true
+}
+
 variable "create_vpc" {
   description = "Controls if VPC should be created (it affects almost all resources)"
   type        = bool
