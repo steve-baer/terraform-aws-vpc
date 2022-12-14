@@ -4,6 +4,12 @@ variable "associate_public_routes" {
   default     = true
 }
 
+variable "create_private_nat_gw_route" {
+  type        = bool
+  description = "whether or not the private subnet route table should have a route to the NAT gateway created for Internet-bound traffic"
+  default     = true
+}
+
 variable "create_vpc" {
   description = "Controls if VPC should be created (it affects almost all resources)"
   type        = bool
